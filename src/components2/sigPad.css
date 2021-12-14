@@ -1,0 +1,25 @@
+.wrapPad{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.signatureCanvas{
+    border: thin solid #c5569a;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.wrapBtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+.clearBtn{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 28px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    /* all: unset; */
+    background: #31a3ae;
+}

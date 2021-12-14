@@ -1,0 +1,145 @@
+.inputName{
+    width: 50%;
+    display: grid;
+    gap: 25px;
+}
+input{
+    border: 2px solid #c5569a;
+    padding: 0px 0.625em;
+    outline: 0;
+    text-align: left;
+    height: 2.5em;
+    font-size: 13px;
+    border-radius: 4px;
+    border-width: 1px;
+}
+input:hover{
+    box-shadow: #c5569a 0px 0px 0px 2px;
+}
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.formGroup label input{
+    width: 100%;
+}
+
+.formCheck{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=checkbox]{
+	position: absolute; 
+    opacity: 0;
+    z-index: -1;
+}
+
+input[type=checkbox] + span {
+	font-size:16pt;
+    color: #222;
+    font-weight: 500;
+}
+input[type=checkbox] + span::before{
+    font: 16pt FontAwesome;
+    padding: 2px 0 0 3px;
+    content: '\00f096';
+    color: #c5569a;
+    width: 16pt;
+	display:inline-block;
+    margin-right: 0.5em;
+}
+
+input[type=checkbox]:checked + span::before {
+    content: '\00f046';
+    color: #c5569a;
+}
+input[type=checkbox]:focus + span::before {
+    outline: 1px dotted #aaa;
+}
+input[type=checkbox]:disabled + span{
+    color: #999;
+}
+input[type=checkbox]:not(:disabled) + span:hover::before {
+    text-shadow: 0 1px 2px #c5569a;
+}
+
+.labelContainer{
+    display: block;
+    position: relative;
+    font-weight: 300;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    font-size: 16pt;
+    cursor: pointer;
+}
+.labelContainer input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.check{
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    top: 0;
+    left: 0;
+    background: lightgray;
+}
+.labelContainer input ~ .check{
+    background: grey;
+}
+.labelContainer input:checked ~ .check{
+    background: #c5569a;
+}
+.check::after{
+    display: none;
+    position: absolute;
+    content: '';
+}
+.labelContainer input:checked ~ .check{
+    display: block;
+}
+.labelContainer.check::after{
+    background: #fff;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    top: 8px;
+    left: 8px;
+}
+
+.formUpload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: thin dashed #c5569a;
+    border-radius: 4px;
+}
+.fileUpload{
+    padding: 15px;
+}
+.uploadImg{
+    position: relative;
+    left: 35%;
+}
+.fileTxt{
+    text-align: center;
+}
+.fileTxt .mb0{
+    margin-bottom: 0;
+}
+.fileTxt .textSize{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+select{
+    outline: 0;
+}
+span.textSize{
+    font-weight: 600;
+}
